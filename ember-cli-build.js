@@ -7,6 +7,9 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import('bower_components/mapbox-gl-js/mapbox-gl.js');
+  app.import('bower_components/mapbox-gl-js/mapbox-gl.css');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

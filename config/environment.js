@@ -18,12 +18,7 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
-  ENV['mapbox'] = {
-    accessToken: 'pk.eyJ1IjoibHVjZ3JheSIsImEiOiJjaWxpM3VjcmsydHVudjZtMHR0eGYzMTd0In0.R0Hi7W-vRakpM2xmMAXbzw',
-    mapId: 'cili41xp900ad9gm3p45c6zxr'
-  };
-
+  
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
