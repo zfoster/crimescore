@@ -9,16 +9,18 @@
 
     {{content-for "head"}}
 
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/crimescore.css">
+    <link rel="stylesheet" href="/assets/vendor.css">
+    <link rel="stylesheet" href="/assets/crimescore.css">
+    <script src="/assets/vendor.js"></script>
+    <script src="/assets/crimescore.js"></script>
+
 
     {{content-for "head-footer"}}
   </head>
   <body>
     {{content-for "body"}}
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/crimescore.js"></script>
+    <div id="crimescore"></div>
 
     {{content-for "body-footer"}}
   </body>
