@@ -33,8 +33,8 @@ export default Ember.Component.extend({
         // Each point range gets a different fill color.
         var layers = [
             [0, 'green'],
-            [20, 'orange'],
-            [200, 'red']
+            [10, 'orange'],
+            [15, 'red']
         ];
 
         layers.forEach(function (layer, i) {
@@ -43,9 +43,9 @@ export default Ember.Component.extend({
                 "type": "circle",
                 "source": "crimes",
                 "paint": {
-                    "circle-color": layer[1],
-                    "circle-radius": 70,
-                    "circle-blur": 1 // blur the circles to get a heatmap look
+                  "circle-color": layer[1],
+                  "circle-radius": 70,
+                  "circle-blur": 1 // blur the circles to get a heatmap look
                 },
                 "filter": i === layers.length - 1 ?
                     [">=", "point_count", layer[0]] :
@@ -77,7 +77,7 @@ export default Ember.Component.extend({
     mapboxgl.accessToken = 'pk.eyJ1IjoibHVjZ3JheSIsImEiOiJjaWxpM3VjcmsydHVudjZtMHR0eGYzMTd0In0.R0Hi7W-vRakpM2xmMAXbzw';
     var map = new mapboxgl.Map({
       container: selector,
-      style: 'mapbox://styles/lucgray/cili41xp900ad9gm3p45c6zxr'
+      style: 'mapbox://styles/mapbox/dark-v8'
     });
 
     this._initHeatMap(map);
