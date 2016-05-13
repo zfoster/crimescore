@@ -7,7 +7,7 @@ export default Ember.Component.extend({
 
   id: Ember.computed.alias('selector'),
 
-  points: {
+  data: {
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
                                                                                 
@@ -5280,7 +5280,7 @@ export default Ember.Component.extend({
 
 
   _initHeatMap(map) {
-    var points = this.get('points');
+    var data = this.get('data');
     map.on('load', function(){
 
         // Add a new source from our GeoJSON data and set the
@@ -5289,7 +5289,7 @@ export default Ember.Component.extend({
             type: "geojson",
             // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
             // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
-            data: points,
+            data: data,
             cluster: true,
             clusterMaxZoom: 15, // Max zoom to cluster points on
             clusterRadius: 20 // Use small cluster radius for the heatmap look
