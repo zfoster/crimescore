@@ -1,1 +1,3 @@
-{{mapbox-gl selector="map" points=model}}
+{{#if mapModel}}
+  {{mapbox-gl selector="map" data=mapModel}}
+{{/if}}
