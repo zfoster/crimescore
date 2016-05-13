@@ -23,7 +23,7 @@ export default Ember.Route.extend({
       curGeoJson.type = "Feature";
 
       var properties = {};
-      properties["Primary ID"] = Math.random() * 5;
+      properties["Primary ID"] = Math.floor((Math.random() * 5)).toString();
       properties["Secondary ID"] = current.caddress + ", " + current.ccity;
 
       var geometry = {};
